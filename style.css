@@ -1,0 +1,57 @@
+:root{
+    margin: 0%;
+    padding: 0%;
+}
+.drop{
+width: 20vh;
+height: 20vh;
+background-color: transparent;
+border-radius: 30% 70% 58% 42% / 38% 43% 57% 62% ;
+box-shadow: inset 10px 15px 15px rgba(0, 0, 0, 0.05),
+            10px 10px 10px rgba(0,0,0,0.1),
+            inset 10px 15px 10px rgba(0,0,0,0.05),
+            
+             15px 20px 20px rgb(0,0,0,0.05),
+             inset -1px -15px 1px rgb(255,255,255,1) ;
+position: relative;
+animation: waterdrop 5s forwards infinite alternate;
+
+}
+.drop::before{
+    content: '';
+    position: absolute;
+    width: 2.5vh;
+    height: 2.5vh;
+    z-index: 1;
+    background-color:rgb(255, 255, 255,1);
+    border-radius: 30% 70% 58% 42% / 38% 43% 57% 62% ;
+    top :0.5em;
+    left: 1.5em;
+}
+.drop::after{
+    content: '';
+    position: absolute;
+    min-width: 1vh;
+    height: 1vh;
+    z-index: 1;
+    background-color:rgb(255, 255, 255,1);
+    border-radius: 30% 70% 58% 42% / 38% 43% 57% 62% ;
+    top :0.5em;
+    left: 2.8em;
+}
+.drop:nth-child(2){
+ top :-5em;
+    left: 10em;
+    width: 10vh;
+height: 10vh;
+}
+@keyframes waterdrop {
+   0%{
+     border-radius: 50% 50% 55% 45% / 30% 68% 32% 70% ;
+    }
+    100%{
+   border-radius: 37% 63% 55% 45% /  38% 43% 57% 62% ;
+    }
+   
+    
+}
